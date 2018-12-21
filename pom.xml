@@ -12,6 +12,8 @@
         <module>enrtity</module>
         <module>service</module>
         <module>client</module>
+        <module>config</module>
+        <module>eureka</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -56,16 +58,11 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <!-- END -->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
-
     </dependencies>
 
     <dependencyManagement>

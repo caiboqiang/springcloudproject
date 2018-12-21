@@ -22,6 +22,11 @@ public class FeignConrtoller {
         String dataJson = jsonObject.getString("data");
         return MessageBox.build("100","ok Json",dataJson);
     }
+
+    /**
+     * 传参 对象等都要分开指定
+     * @return
+     */
     @GetMapping("/getPhones")
     public MessageBox getPhone(){
         String data = feign.getP("13971320964");

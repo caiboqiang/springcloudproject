@@ -4,20 +4,25 @@ package com.cai.controller;
 
 import com.cai.common.MessageBox;
 import com.cai.service.UserInfoService;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 /**
  * 测试类
  */
 @RestController
-@RequestMapping("/A")
+@RequestMapping("/UserInfo")
 public class UserInfoController {
     //todo spring-cliud-module
     @Autowired
     private UserInfoService userService;
+    @Autowired
+    private AmqpTemplate amqpTemplate;
     @GetMapping("userHello")
     public MessageBox userInfoControllerHello(){
         return MessageBox.build("100","0.0.1 OK");
@@ -31,5 +36,11 @@ public class UserInfoController {
     @GetMapping("getPhone")
     public MessageBox getName(String userPhone){
         return MessageBox.build("100","ok",userService.getName(userPhone));
+    }
+
+    @GetMapping("Mq")
+    public MessageBox Mq(){
+        amqpTemplate.convertAndSend("MqUserInfo","MQ"+new Date());
+        return MessageBox.build("100","0.0.1 OKMQ");
     }
 }
