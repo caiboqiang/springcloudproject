@@ -14,6 +14,7 @@
         <module>client</module>
         <module>config</module>
         <module>eureka</module>
+        <module>api_zuul</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

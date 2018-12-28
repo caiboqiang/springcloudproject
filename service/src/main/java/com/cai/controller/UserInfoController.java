@@ -8,6 +8,7 @@ import com.cai.streammsg.StreamClient;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,8 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("/UserInfo")
+//todo  设置Cookie可以跨域请求  此注解可以添加到类上 也可以添加到方法上   对单个类下的接口跨域
+@CrossOrigin(allowCredentials = "true")
 public class UserInfoController {
     //todo spring-cliud-module
     @Autowired
