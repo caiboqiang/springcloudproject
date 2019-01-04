@@ -1,5 +1,6 @@
 package com.cbq.zuul.config;
 
+
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;
@@ -16,6 +17,7 @@ public class CorsConfig {
     @Bean
     public CorsFilter corsFilter(){
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        //跨域配置
         final CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);//todo 设置跨域
         config.setAllowedOrigins(Arrays.asList("*")); //todo  里面放的都是域名 www.a.com  ,b.com ....
