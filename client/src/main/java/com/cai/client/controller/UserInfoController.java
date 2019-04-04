@@ -45,6 +45,8 @@ public class UserInfoController {
         JSONObject jsonObject = JSONObject.fromObject(data);
         String dataJson = jsonObject.getString("data");
         return MessageBox.build("100","ok Json",dataJson);
+
+
     }
 
 
