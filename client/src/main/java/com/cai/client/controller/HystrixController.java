@@ -18,7 +18,7 @@ public class HystrixController {
 
     /**
      * 出发服务降级
-     * @return 语言
+     * @return
      */
     // @HystrixCommand(fallbackMethod = "fallback") //todo fallbackMethod = "方法名"
 

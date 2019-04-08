@@ -23,8 +23,8 @@ zuul:
     ####简洁写法
     #serviceeureka: /myservice/**
   #禁止外部访问(排除某些路由) 接口 是set集合
-  ignored-patterns:
-    - /myservice/getAll
+  #ignored-patterns:
+    #- /myservice/getAll
     #- /serviceeureka/getAll
     #- /**/getAll
 
