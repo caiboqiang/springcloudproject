@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Feign 调用 服务端 USERINFOEUREKADATASERVICE UserInfoEurekaDataService
  */
 @FeignClient(name = "ServiceEureka")//服务名字
-public interface Feign {
+public interface Feigns {
     @GetMapping("/getAll")
     String getF();
     @GetMapping("/getPhone")

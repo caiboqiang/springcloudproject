@@ -11,18 +11,26 @@
         <module name="config" />
         <module name="enrtity" />
         <module name="eureka" />
+        <module name="feign" />
         <module name="service" />
+        <module name="txlcn-tm" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tx" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="api_zuul" options="-parameters" />
-      <module name="client" options="-parameters" />
-      <module name="config" options="-parameters" />
-      <module name="enrtity" options="-parameters" />
-      <module name="eureka" options="-parameters" />
-      <module name="service" options="-parameters" />
+      <module name="api_zuul" options="-parameters -Xlint:deprecation" />
+      <module name="client" options="-parameters -Xlint:deprecation" />
+      <module name="config" options="-parameters -Xlint:deprecation" />
+      <module name="enrtity" options="-parameters -Xlint:deprecation" />
+      <module name="eureka" options="-parameters -Xlint:deprecation" />
+      <module name="feign" options="-parameters -Xlint:deprecation" />
+      <module name="service" options="-parameters -Xlint:deprecation" />
+      <module name="tx" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-tm" options="-parameters -Xlint:deprecation" />
     </option>
   </component>
 </project>

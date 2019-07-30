@@ -1,6 +1,7 @@
 package com.cai.client.feign;
 
 import com.cai.common.MessageBox;
+import com.cai.feign.Feign;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ public class FeignConrtoller {
     @Autowired
     private Feign feign;
 
+
     @GetMapping("/getFeign")
     public MessageBox getFeign(){
         String data = feign.getF();
@@ -22,7 +24,6 @@ public class FeignConrtoller {
         String dataJson = jsonObject.getString("data");
         return MessageBox.build("100","ok Json",dataJson);
     }
-
     /**
      * 传参 对象等都要分开指定
      * @return
